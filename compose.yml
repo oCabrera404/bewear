@@ -1,0 +1,14 @@
+services:
+  postgres:
+    image: postgres:latest
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=cabrera
+      - POSTGRES_PASSWORD=cabrera
+      - POSTGRES_DB=polls
+    volumes:
+      - polls_pg_data:/var/lib/postgresql
+
+volumes:
+  polls_pg_data:
